@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Inter';
+    user-select: none;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #F5F5F5;
+
+}
+
+.container {
+    margin: auto;
+    width: 1440px;
+}
