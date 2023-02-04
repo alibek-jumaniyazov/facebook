@@ -1,0 +1,124 @@
+
+.Users{
+    position: relative;
+}
+.ss{
+    margin: 8px 0;
+}
+
+.d{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    padding: 10px 9px;
+    width: 328px;
+    height: 36px;
+    background: #E7F3FF;
+    border-radius: 6px;
+}
+.d p{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #1877F2;
+}
+.hrr{
+    border: 1px solid #F5F5F5;;
+    width: 331;
+}
+.adres{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 0 6px;
+}
+.adres p{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #050505;
+
+}
+
+.adres span{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #1876F2;
+}
+.sibar-box_title{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #050505;
+}
+
+.Shops{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    width: 252px;
+    padding: 5px;
+}
+.shops_sum{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #050505;
+}
+.shops_name{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #050505;
+}
+.Shops span{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #65676B;
+}
+.Shops img{
+    width: 250.57px;
+    height: 250.57px;
+}
+
+.shop_rec{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 1900px;
+    gap: 17px;
+    align-items: center;
+    height: auto;
+    margin-top: 60px;
+    scale: 96%;
+    transform: translateX(-18px);
+}
+.shop_hed{
+    display: flex;
+    justify-content: space-between;
+    width: 1875px;
+    padding: 15px;
+}
+.shop_hed h1{
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 24px;
+    color: #050505;
+}
+
+.shop_hed p{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #1876F2;
+}
+

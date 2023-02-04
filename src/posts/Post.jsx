@@ -9,12 +9,17 @@ import alibek from '../Images/alibek.jpg'
 import user from '../Images/user.jpg'
 import user2 from '../Images/user2.jpg'
 import post_img from '../Images/IMAGE-2.png'
-import { useState } from 'react'
+import { memo, useState } from 'react'
 
-export default function Post({ post, setPost, like, name, add, icon }) {
+export default memo( function Post({ post, setPost, name, add, icon }) {
 
 
+    function delet(id){
+        const newData = post.filter((value) => value.id !== id)
+        setPost(newData)
+    }
 
+console.log(post.id);
 
 
     return (
@@ -32,7 +37,7 @@ export default function Post({ post, setPost, like, name, add, icon }) {
                     </div>
                     <div className="profil_menu">
                         <img src={icon17} alt="" />
-                        <img src={icon18} alt="" />
+                        <img onClick={() => delet(post.id)} src={icon18} alt="" />
                     </div>
                 </div>
                 <p className="desc">{post.dec}</p>
@@ -40,7 +45,7 @@ export default function Post({ post, setPost, like, name, add, icon }) {
                 <div className="likes">
                     <div className="like">
                         <img src={icon22} alt="" />
-                        <p>{like}тыс.</p>
+                        <p>{post.like}тыс.</p>
                     </div>
                     <div className="likes_info">
                         <p>1,7 тыс. комментария</p>
@@ -65,4 +70,4 @@ export default function Post({ post, setPost, like, name, add, icon }) {
             </div>
         </>
     )
-}
+})

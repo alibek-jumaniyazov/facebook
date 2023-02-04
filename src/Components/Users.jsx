@@ -6,17 +6,22 @@ import user2 from '../Images/user2.svg'
 import user3 from '../Images/user3.svg'
 import user4 from '../Images/user4.svg'
 import user5 from '../Images/user5.svg'
+import main from '../Images/div_users.svg'
 
 
 
 
 export default function Users() {
     return (
+        <>
         <div className="Users">
             <div className="user-sidebar">
                 <div className="hed-sidebar">
-                    <p>Друзья</p>
-                    <div className="nas"><img src={nas} alt="" /></div>
+                    <div className="dd">
+                        <p>Друзья</p>
+                        <div className="nas"><img src={nas} alt="" /></div>
+                    </div>
+
                 </div>
                 <div className="sidebar-box r">
                     <div className="s">
@@ -60,6 +65,12 @@ export default function Users() {
                     <img src={right} alt="" />
                 </div>
             </div>
+
+            
         </div>
+        <div className="video_main">
+                <img className='video_main' src={main} alt="" />
+            </div>
+            </>
     )
 }

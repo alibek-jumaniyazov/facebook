@@ -30,7 +30,7 @@ import post_img from '../Images/IMAGE-2.png'
 export default function Home() {
 
 
-    const [like, setLike] = useState(10)
+    const [like, setLike] = useState(19)
     const [likee, setLikee] = useState(230)
     const [name, setName] = useState('')
     const [icon, setIcon] = useState('')
@@ -38,19 +38,21 @@ export default function Home() {
 
     const [post, setPost] = useState([
         {
+            id:1,
             name: 'Sherzod Asadov',
             data: '13 декабрь 2022 г. ·',
             dec: 'Президент Шавкат Мирзиёев коммунал хизматлар сифати, шу жумладан хонадонларда иссиқлик таъминоти билан шахсан танишиш учун Учтепа туманидаги маҳаллалардан бирига кириб, у ердаги аҳволни кўздан кечирди. Маҳалладаги вазият Президентимизнинг жиддий эътирозларига сабаб бўлди.',
             img: post_img,
-            likee: like,
+            like: like,
             user_img: user2,
         },
         {
+            id: 2,
             name: ' Alibek Jumniyazov',
             data: '11 декабрь 2022 г. ·',
             dec: 'Президент Шавкат Мирзиёев коммунал хизматлар сифати, шу жумладан хонадонларда иссиқлик таъминоти билан шахсан танишиш учун Учтепа туманидаги маҳаллалардан бирига кириб, у ердаги аҳволни кўздан кечирди. Маҳалладаги вазият Президентимизнинг жиддий эътирозларига сабаб бўлди.',
             img: alibek,
-            likee: like,
+            like: like,
             user_img: user,
         }
     ])
@@ -160,7 +162,7 @@ export default function Home() {
                 </div>
                 {
                     post.map((item) => (
-                        <Post like={like} name={name} post={item} setPost={setPost} add={add} icon={icon} />
+                        <Post  post={item} add={add} icon={icon} />
                     ))
                 }
             </div>

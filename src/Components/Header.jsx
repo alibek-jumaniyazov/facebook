@@ -1,4 +1,4 @@
-import Logo from '../Images/Logo.png'
+import Logo from '../Images/Logo.svg'
 import Bell from '../Images/Frame3.svg'
 import Chat from '../Images/Frame2.svg'
 import Menu from '../Images/Frame1.svg'
@@ -9,7 +9,9 @@ import home from '../Images/VectorH.svg'
 import Videos from '../Images/Vector (3).svg'
 import videos from '../Images/videoes.svg'
 import Shop from '../Images/Vector (4).svg'
-import Games from '../Images/Group.svg'
+import shop from '../Images/shop_blue.svg'
+import Games from '../Images/Games.svg'
+import games from '../Images/gamess.svg'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import user from '../Images/user.jpg'
@@ -32,7 +34,8 @@ export default function Header() {
         setU(Users)
         seth(Home)
         setV(Videos)
-
+        setSh(Shop)
+        setg(Games)
     }
 
 
@@ -41,6 +44,10 @@ export default function Header() {
         setU(Users)
         seth(Home)
         setV(Videos)
+        setSh(shop)
+        setSh(Shop)
+        setg(Games)
+
 
     }
 
@@ -49,6 +56,9 @@ export default function Header() {
         setU(users)
         seth(home)
         setV(Videos)
+        setSh(Shop)
+        setg(Games)
+
 
     }
 
@@ -58,6 +68,9 @@ export default function Header() {
         setV(videos)
         setU(Users)
         seth(home)
+        setSh(Shop)
+        setg(Games)
+
     }
 
 
@@ -66,6 +79,8 @@ export default function Header() {
         setU(Users)
         seth(home)
         setV(Videos)
+        setSh(shop)
+        setg(Games)
 
 
     }
@@ -75,6 +90,10 @@ export default function Header() {
         setLeft(1374)
         setU(Users)
         seth(home)
+        setV(Videos)
+        setSh(Shop)
+
+        setg(games)
 
     }
 
@@ -83,7 +102,7 @@ export default function Header() {
             <div className="search-bar">
              <Link to={'/'} >  <img src={Logo} onClick={Logoo} alt="" className="Logo" /></Link>
                 <div className="search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i className="fa-solid fa-magnifying-glass"></i>
                     <input type="text" placeholder='Поиск на Facebook' />
                 </div>
             </div>
@@ -92,21 +111,17 @@ export default function Header() {
                     <Link to={'/'}> <img src={h} alt="" className="icon" /></Link>
                     <div className="hr" style={{ left: left }}></div>
                 </div>
-
                 <div className="box" onClick={Userss}>
                     <Link to={'/users'}> <img src={u} alt="" className="icon" /></Link>
-
                 </div>
                 <div className="box" onClick={Videoess}>
                     <Link to={'/videos'}> <img src={v} alt="" className="icon" /></Link>
-
                 </div>
                 <div className="box" onClick={Shopp}>
                     <Link to={'/shop'}> <img src={sh} alt="" className="icon" /></Link>
-
                 </div>
                 <div className="box" onClick={Gamess}>
-                    <Link to={'/games'}> <img src={g} alt="" className="icon" /></Link>
+                    <Link to={'/game'}> <img src={g} alt="" className="icon" /></Link>
 
                 </div>
 

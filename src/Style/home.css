@@ -175,6 +175,12 @@ hr {
     margin-bottom: 20px;
 
 }
+.padbis {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #216FDB;
+}
 
 .nav_title {
     font-weight: 400;
