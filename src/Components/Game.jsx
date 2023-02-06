@@ -30,15 +30,15 @@ export default function Game() {
 
 
     const [list, setList] = useState('iconnn')
-    const [game, setGame] = useState('sidebar-box y none')
+    const [game, setGame] = useState('sidebar-box y block')
 
     function click() {
-        if (game == 'sidebar-box y none') {
-            setGame('sidebar-box y block')
-            setList('right')
-        }
         if (game == 'sidebar-box y block') {
             setGame('sidebar-box y none')
+            setList('right')
+        }
+        if (game == 'sidebar-box y none') {
+            setGame('sidebar-box y block')
             setList('iconnn')
         }
     }

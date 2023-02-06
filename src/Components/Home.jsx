@@ -20,10 +20,11 @@ import menu from '../Images/menu.png'
 import user from '../Images/user.jpg'
 import addd from '../Images/div.png'
 import Post from '../posts/Post'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import alibek from '../Images/alibek.jpg'
 import user2 from '../Images/user2.jpg'
 import post_img from '../Images/IMAGE-2.png'
+import axios from 'axios'
 
 
 
@@ -57,6 +58,10 @@ export default function Home() {
         }
     ])
 
+    useEffect(() => {
+        axios.get('https://api.datashop.uz/api').then(res => setPost(res))
+        console.log(post);
+    },[])
 
     function add() {
         if (name == '') {
@@ -160,11 +165,10 @@ export default function Home() {
                         <p>Создать комнату</p>
                     </div>
                 </div>
-                {
-                    post.map((item) => (
-                        <Post  post={item} add={add} icon={icon} />
-                    ))
-                }
+                
+                   
+                        <Post add={add} name={name} icon={icon}  post={post} setPost={setPost}/>
+                    
             </div>
             <div className="home_reck">
                 <h1>Реклама</h1>
