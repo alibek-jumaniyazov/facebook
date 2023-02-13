@@ -9,10 +9,14 @@ import './Style/shop.css'
 import './Style/users.css'
 import './Style/videos.css'
 import './Style/header.css'
+import { ChakraProvider } from '@chakra-ui/react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
+    <ChakraProvider>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </ChakraProvider>
+
 );

@@ -401,3 +401,95 @@ padding: 0;
     line-height: 18px;
     color: #050505;
  }
+
+
+ .create_post{
+    position: fixed;
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: #00000081;
+    z-index: 999999999999999;
+    overflow: hidden;
+    backdrop-filter: blur(1px);
+ }
+ .inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    width: 700px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+ }
+
+ .none{
+    display: none;
+    z-index: 0;
+ }
+.inputBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #05050579;
+}
+
+.boxInput{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: white;
+    width: 900px;
+    height: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.boxInput img{
+    position: absolute;
+    right: 20px;
+    top: 20px;    
+}
+.boxInput button{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;   
+    background-color: #2078F4; 
+    padding: 10px 40px;
+    border-radius: 6px;
+    color: white;
+}
+.inputsBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    gap: 30px;
+}
+.inputDesc{
+   border: 1px solid #65676b94;
+   padding: 10px;
+   width: 320px;
+   border-radius: 6px;
+}
+.post_user_info p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}

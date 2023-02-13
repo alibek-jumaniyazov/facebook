@@ -55,7 +55,7 @@ export default memo(function Post({ post , add ,icon , setPost, name}) {
                         <hr />
                         <div className="users_web">
                             <div onClick={add} className="user_box">
-                                <img src={icon19} alt="" className={`user_icon ${icon}`} />
+                                <img src={icon19} alt="" className={`user_icon`} />
                                 <p className={`user_title ${name}`} >Нравится</p>
                             </div>
                             <div className="user_box">

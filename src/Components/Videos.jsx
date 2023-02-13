@@ -106,11 +106,9 @@ export default function Video() {
                 </div>
             </div>
             <div className="VideoPost">
-                {
-                    video.map(item => (
-                        <VideoPost item={item} />
-                    ))
-                }
+          
+                        <VideoPost  video={video} setVideo={setVideo} />
+       
             </div>
         </>
     )

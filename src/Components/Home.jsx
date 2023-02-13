@@ -20,12 +20,16 @@ import menu from '../Images/menu.png'
 import user from '../Images/user.jpg'
 import addd from '../Images/div.png'
 import Post from '../posts/Post'
-import { useEffect, useState } from 'react'
+import { React, useEffect, useState } from 'react'
 import alibek from '../Images/alibek.jpg'
 import user2 from '../Images/user2.jpg'
 import post_img from '../Images/IMAGE-2.png'
 import axios from 'axios'
+import icon18 from '../Images/ii.png'
 
+
+import { useDisclosure, Input, Button, File } from '@chakra-ui/react'
+import { useRef } from 'react'
 
 
 export default function Home() {
@@ -34,18 +38,23 @@ export default function Home() {
     const [like, setLike] = useState(19)
     const [likee, setLikee] = useState(230)
     const [name, setName] = useState('')
+    const [input, setInput] = useState('')
+    const [img, setImg] = useState()
     const [icon, setIcon] = useState('')
+    const [addpost, setAdd] = useState('none')
+
 
 
     const [post, setPost] = useState([
         {
-            id:1,
+            id: 1,
             name: 'Sherzod Asadov',
             data: '13 декабрь 2022 г. ·',
             dec: 'Президент Шавкат Мирзиёев коммунал хизматлар сифати, шу жумладан хонадонларда иссиқлик таъминоти билан шахсан танишиш учун Учтепа туманидаги маҳаллалардан бирига кириб, у ердаги аҳволни кўздан кечирди. Маҳалладаги вазият Президентимизнинг жиддий эътирозларига сабаб бўлди.',
             img: post_img,
             like: like,
             user_img: user2,
+
         },
         {
             id: 2,
@@ -55,13 +64,44 @@ export default function Home() {
             img: alibek,
             like: like,
             user_img: user,
-        }
+        },
+
     ])
 
-    useEffect(() => {
-        axios.get('https://api.datashop.uz/api').then(res => setPost(res))
-        console.log(post);
-    },[])
+
+    const descRef = useRef('')
+    const imgRef = useRef()
+
+    // useEffect(() => {
+    //     axios.get('https://api.datashop.uz/api').then(res => setPost(res))
+    //     console.log(post);
+    // }, [])
+
+    function addPost() {
+
+        setPost([
+            ...post, {
+                id: 333333,
+                name: 'Alibek Jumniyazov',
+                data: '11 декабрь 2022 г. ·',
+                dec: input,
+                img: img,
+                like: like,
+                user_img: user,
+            }
+        ])
+
+
+        setAdd('none')
+        setInput('')
+    }
+    function closePost() {
+        setAdd('none')
+    }
+    function openPost() {
+        setAdd('inputBox')
+    }
+
 
     function add() {
         if (name == '') {
@@ -74,9 +114,8 @@ export default function Home() {
             setName('')
             setIcon('')
         }
-
-
     }
+
 
     return (
         <div className="Home">
@@ -132,7 +171,7 @@ export default function Home() {
             </div>
             <div className="home_main">
                 <div className="add_story">
-                    <img src={addd} alt="" className="add_icon" />
+                    <img onClick={() => openPost()} src={addd} alt="" className="add_icon" />
                     <div className="add_info">
                         <p>Создать историю</p>
                         <span>Поделитесь фото или напишите что-нибудь.</span>
@@ -165,10 +204,10 @@ export default function Home() {
                         <p>Создать комнату</p>
                     </div>
                 </div>
-                
-                   
-                        <Post add={add} name={name} icon={icon}  post={post} setPost={setPost}/>
-                    
+
+
+                <Post add={add} name={name} icon={icon} post={post} setPost={setPost} />
+
             </div>
             <div className="home_reck">
                 <h1>Реклама</h1>
@@ -199,6 +238,17 @@ export default function Home() {
                     <div className="soz_group">
                         <img src={group} alt="" />
                         <p>Создать группу</p>
+                    </div>
+                </div>
+            </div>
+            <div className={`${addpost}`}>
+                <div className="boxInput">
+                    <img onClick={() => closePost()} src={icon18} alt="" />
+                    <button onClick={() => addPost()} >Add Post</button>
+                    <div className="inputsBox">
+                        <input className='inputDesc' onChange={e => setInput(e.target.value)} type="text" placeholder='Add description' />
+                        <input onChange={e => setImg(e.target.value)} type="file"  />
+
                     </div>
                 </div>
             </div>
