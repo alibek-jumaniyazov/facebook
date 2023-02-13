@@ -43,6 +43,7 @@ import img15 from '../Images/ayfon15.jpg'
 import img16 from '../Images/ayfon16.jpg'
 import img17 from '../Images/ayfon17.jpg'
 import img18 from '../Images/ayfon18.jpg'
+import icon18 from '../Images/ii.png'
 import img19 from '../Images/ayfon19.jpg'
 import img20 from '../Images/ayfon20.jpg'
 import img21 from '../Images/ayfon21.jpg'
@@ -226,6 +227,35 @@ export default function Shop() {
         }
 
     ])
+
+    const [input, setInput] = useState('')
+    const [sum, setSum] = useState()
+    const [gorod, setGorod] = useState('')
+    const [img, setImg] = useState([])
+    const [addpost, setAdd] = useState('none')
+
+
+    function addPost() {
+
+        setShops([
+            ...shops, {
+                id: shops.length +1,
+                img:img,
+                sum:sum,
+                name: input,
+                gorod: gorod,
+            }
+        ])
+        setAdd('none')
+        setInput('')
+    }
+    function closePost() {
+        setAdd('none')
+    }
+    function openPost() {
+        setAdd('inputBox')
+    }
+
     return (
         <div className='Shop'>
             <div className="Users">
@@ -278,7 +308,7 @@ export default function Shop() {
                         </div>
                         <img src={right} alt="" />
                     </div>
-                    <div className="d x">
+                    <div onClick={() => openPost()} className="d x">
                         + <p>Создать новое объявление</p>
                     </div>
                     <hr className='hrr x' />
@@ -434,6 +464,18 @@ export default function Shop() {
                         <Shops key={index} item={item} />
                     ))
                 }
+            </div>
+            <div className={`${addpost}`}>
+                <div className="boxInput">
+                    <img onClick={() => closePost()} src={icon18} alt="" />
+                    <button onClick={() => addPost()} >Add Post</button>
+                    <div className="inputsBox">
+                        <input accept=".jpg, .jpeg, .png" onChange={e => setImg(e.target.value)} type="file"  />
+                        <input className='inputDesc' onChange={e => setSum(e.target.value)} type="text" placeholder='Add price' />
+                        <input className='inputDesc' onChange={e => setInput(e.target.value)} type="text" placeholder='Add name' />
+                        <input className='inputDesc' onChange={e => setGorod(e.target.value)} type="text" placeholder='Add from' />
+                    </div>
+                </div>
             </div>
         </div>
     )
