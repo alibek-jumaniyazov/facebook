@@ -11,14 +11,7 @@ import user2 from '../Images/user2.jpg'
 import post_img from '../Images/IMAGE-2.png'
 import { memo, useState } from 'react'
 
-export default memo(function Post({ post , add ,icon , setPost, name}) {
-
-
-    function delet(id){
-        const newData = post.filter((value) => value.id !== id)
-        setPost(newData)
-    }
-
+export default memo(function Post({ post , add ,icon , setPost, name, delet}) {
 
     return (
         <>

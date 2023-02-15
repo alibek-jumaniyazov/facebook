@@ -470,7 +470,7 @@ export default function Shop() {
                     <img onClick={() => closePost()} src={icon18} alt="" />
                     <button onClick={() => addPost()} >Add Post</button>
                     <div className="inputsBox">
-                        <input accept=".jpg, .jpeg, .png" onChange={e => setImg(e.target.value)} type="file"  />
+                        <input className='inputDesc' onChange={e => setImg(e.target.value)} type="text" placeholder='Add img url'/>
                         <input className='inputDesc' onChange={e => setSum(e.target.value)} type="text" placeholder='Add price' />
                         <input className='inputDesc' onChange={e => setInput(e.target.value)} type="text" placeholder='Add name' />
                         <input className='inputDesc' onChange={e => setGorod(e.target.value)} type="text" placeholder='Add from' />

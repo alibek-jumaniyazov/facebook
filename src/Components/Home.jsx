@@ -39,12 +39,14 @@ export default function Home() {
     const [likee, setLikee] = useState(230)
     const [name, setName] = useState('')
     const [input, setInput] = useState('')
-    const [img, setImg] = useState()
+    const [img, setImg] = useState('')
     const [icon, setIcon] = useState('')
     const [addpost, setAdd] = useState('none')
 
 
 
+
+console.log(img);
     const [post, setPost] = useState([
         {
             id: 1,
@@ -68,6 +70,10 @@ export default function Home() {
 
     ])
 
+    function delet(id){
+        const newData = post.filter((value) => value.id !== id)
+        setPost(newData)
+    }
 
     const descRef = useRef('')
     const imgRef = useRef()
@@ -206,7 +212,7 @@ export default function Home() {
                 </div>
 
 
-                <Post add={add} name={name} icon={icon} post={post} setPost={setPost} />
+                <Post add={add} delet={delet} name={name} icon={icon} post={post} setPost={setPost} />
 
             </div>
             <div className="home_reck">
