@@ -98,8 +98,8 @@
     gap: 17px;
     align-items: center;
     height: auto;
-    margin-top: 60px;
-    scale: 96%;
+    margin-top: -60px;
+    scale: 80%;
     transform: translateX(-18px);
 }
 .shop_hed{
