@@ -16,7 +16,7 @@
     justify-content: center;
     gap: 2px;
     position: fixed;
-    left: 450px;
+    left: 300px;
 }
 
 .icons_list {
@@ -309,7 +309,7 @@ padding: 0;
     align-items: flex-start;
     gap: 10px;
     position: fixed;
-    right: 350px;
+    right: 150px;
 }
 
 .home_reck h1{

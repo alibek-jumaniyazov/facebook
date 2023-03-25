@@ -21,7 +21,7 @@ import user from '../Images/user.jpg'
 
 export default function Header() {
 
-    const [left, setLeft] = useState(830)
+    const [left, setLeft] = useState(662)
     const [h, seth] = useState(Home)
     const [u, setU] = useState(Users)
     const [v, setV] = useState(Videos)
@@ -30,7 +30,7 @@ export default function Header() {
 
 
    function Logoo(){
-        setLeft(830)
+        setLeft(662)
         setU(Users)
         seth(Home)
         setV(Videos)
@@ -40,7 +40,7 @@ export default function Header() {
 
 
     function Homee(){
-        setLeft(830)
+        setLeft(662)
         setU(Users)
         seth(Home)
         setV(Videos)
@@ -52,7 +52,7 @@ export default function Header() {
     }
 
     function Userss(){
-        setLeft(966)
+        setLeft(805)
         setU(users)
         seth(home)
         setV(Videos)
@@ -64,7 +64,7 @@ export default function Header() {
 
 
     function Videoess(){
-        setLeft(1102)
+        setLeft(932)
         setV(videos)
         setU(Users)
         seth(home)
@@ -75,7 +75,7 @@ export default function Header() {
 
 
     function Shopp(){
-        setLeft(1238)
+        setLeft(1068)
         setU(Users)
         seth(home)
         setV(Videos)
@@ -87,7 +87,7 @@ export default function Header() {
 
 
     function Gamess(){
-        setLeft(1374)
+        setLeft(1214)
         setU(Users)
         seth(home)
         setV(Videos)
